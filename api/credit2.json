@@ -1,0 +1,68 @@
+{
+  "code": 0,
+  "msg": "",
+  "count": 1000,
+  "data": [
+    {
+      "name": "张三",
+      "studentnumber": "202015360120",
+      "colleage": "计算机科学与技术",
+      "credit": "9.8",
+      "cause": "互联网+"
+    },{
+      "name": "张三",
+      "studentnumber": "202015360120",
+      "colleage": "计算机科学与技术",
+      "credit": "9.8",
+      "cause": "互联网+"
+    },{
+      "name": "张三",
+      "studentnumber": "202015360120",
+      "colleage": "计算机科学与技术",
+      "credit": "9.8",
+      "cause": "互联网+"
+    },{
+      "name": "张三",
+      "studentnumber": "202015360120",
+      "colleage": "计算机科学与技术",
+      "credit": "9.8",
+      "cause": "互联网+"
+    },{
+      "name": "张三",
+      "studentnumber": "202015360120",
+      "colleage": "计算机科学与技术",
+      "credit": "9.8",
+      "cause": "互联网+"
+    },{
+      "name": "张三",
+      "studentnumber": "202015360120",
+      "colleage": "计算机科学与技术",
+      "credit": "9.8",
+      "cause": "互联网+"
+    },{
+      "name": "张三",
+      "studentnumber": "202015360120",
+      "colleage": "计算机科学与技术",
+      "credit": "9.8",
+      "cause": "互联网+"
+    },{
+      "name": "张三",
+      "studentnumber": "202015360120",
+      "colleage": "计算机科学与技术",
+      "credit": "9.8",
+      "cause": "互联网+"
+    },{
+      "name": "张三",
+      "studentnumber": "202015360120",
+      "colleage": "计算机科学与技术",
+      "credit": "9.8",
+      "cause": "互联网+"
+    },{
+      "name": "张三",
+      "studentnumber": "202015360120",
+      "colleage": "计算机科学与技术",
+      "credit": "9.8",
+      "cause": "互联网+"
+    }
+  ]
+}
