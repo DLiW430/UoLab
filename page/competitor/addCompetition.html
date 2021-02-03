@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>layui</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../../lib/layui-v2.5.5/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../css/public.css" media="all">
+    <style>
+        body {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+<div class="layui-form layuimini-form">
+    <div class="layui-form-item" >
+        <label class="layui-form-label ">竞赛类别</label>
+        <div class="layui-input-block" >
+            <input type="radio" name="competition" title="创新创业类竞赛" checked="">
+            <input type="radio" name="competition" title="综合实践类竞赛" >
+            <input type="radio" name="competition" title="知识类竞赛" >
+            <input type="radio" name="competition" title="技术型竞赛" >
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">年度</label>
+        <div class="layui-input-block">
+            <input type="text" class="layui-input" id="year" readonly>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label ">题目</label>
+        <div class="layui-input-block">
+            <input type="text" name="title" lay-verify="title" placeholder="请输入题目" value="" class="layui-input">
+            <tip>2-30 个汉字字母组合</tip>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label ">组长</label>
+        <div class="layui-input-block">
+            <input type="text" name="teacher" lay-verify="teacher" placeholder="请输入组长姓名" value="" class="layui-input">
+            <tip>2-6个汉字</tip>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label ">组员</label>
+        <div class="layui-input-block">
+            <input type="text" name="partner" lay-verify="partner" placeholder="请输入组员姓名" value="" class="layui-input">
+            <tip>2-6个汉字</tip>
+        </div>
+    </div>
+    <div class="layui-form-item" >
+        <label class="layui-form-label ">获奖等级</label>
+        <div class="layui-input-block" >
+            <input type="radio" name="award" title="特等" >
+            <input type="radio" name="award" title="一等" >
+            <input type="radio" name="award" title="二等" >
+            <input type="radio" name="award" title="三等" >
+            <input type="radio" name="award" title="三等" >
+            <input type="radio" name="award" title="优秀奖" >
+            <input type="radio" name="award" title="无" checked="">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label ">指导老师</label>
+        <div class="layui-input-block">
+            <input type="text" name="realteacher" lay-verify="realteacher" placeholder="请输入指导老师姓名" value="" class="layui-input">
+            <tip>2-6个汉字</tip>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn layui-btn-normal" lay-submit lay-filter="saveBtn">确认保存</button>
+        </div>
+    </div>
+</div>
+<script src="../../lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
+<script src="../../js/lay-config.js?v=1.0.4" charset="utf-8"></script>
+<script>
+    layui.use(['form','laydate', 'layarea'], function () {
+        var form = layui.form,
+            layer = layui.layer,
+            laydate = layui.laydate,
+            layarea = layui.layarea;
+        $ = layui.$;
+        //年选择器
+        laydate.render({
+            elem: '#year'
+            ,type: 'year',
+            trigger:'click',
+            max: maxDate()
+        });
+
+        // 设置最大可选的日期
+        function maxDate() {
+            var now = new Date();
+            return now.getFullYear() + "-" + (now.getMonth() + 1) + "-" + now.getDate();
+        }
+        //验证复选框非空
+        form.verify({
+            fuxuan:function () {
+                var checked=document.getElementById("key_service");
+                if(checked.checked == ""){
+                    return "请至少选择一个职务";
+                }
+            }
+        });
+
+
+        //监听录入竞赛信息格式正确
+        form.verify({
+            title: function(value, item){ //value：表单的值、item：表单的DOM对象
+                if(!new RegExp("([\u4e00-\u9fa5]{2,30})").test(value)){
+                    return '题目录入不符合规则';
+                }
+            },teacher: [
+                /([\u4e00-\u9fa5]{2,6})/,'主讲人信息不符合规则'
+            ],partner: [
+                /([\u4e00-\u9fa5]{2,6})/,'组员信息不符合规则'
+            ],realteacher: [
+                /([\u4e00-\u9fa5]{2,6})/,'指导老师信息不符合规则'
+            ]
+        });
+
+        // 籍贯
+        layarea.render({
+            elem: '#area-picker',
+            // data: {
+            //     province: '广东省',
+            //     city: '深圳市',
+            //     county: '龙岗区',
+            // },
+            change: function (res) {
+                //选择结果
+                console.log(res);
+            }
+        });
+
+        //监听提交
+        form.on('submit(saveBtn)', function (data) {
+            var index = layer.alert(JSON.stringify(data.field), {
+                title: '最终的提交信息'
+            }, function () {
+
+                // 关闭弹出层
+                layer.close(index);
+
+
+                var iframeIndex = parent.layer.getFrameIndex(window.name);
+                parent.layer.close(iframeIndex);
+
+            });
+
+            return false;
+        });
+
+    });
+</script>
+</body>
+</html>

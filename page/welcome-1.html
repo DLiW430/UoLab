@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>首页二</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../lib/layui-v2.5.5/css/layui.css" media="all">
+    <link rel="stylesheet" href="../lib/font-awesome-4.7.0/css/font-awesome.min.css" media="all">
+    <link rel="stylesheet" href="../css/public.css" media="all">
+    <style>
+        .layui-card {border:1px solid #f2f2f2;border-radius:5px;}
+        .icon {margin-right:10px;color:#1aa094;}
+        .icon-cray {color:#ffb800!important;}
+        .icon-blue {color:#1e9fff!important;}
+        .icon-tip {color:#ff5722!important;}
+        .layuimini-qiuck-module {text-align:center;margin-top: 10px}
+        .layuimini-qiuck-module a i {display:inline-block;width:100%;height:60px;line-height:60px;text-align:center;border-radius:2px;font-size:30px;background-color:#F8F8F8;color:#333;transition:all .3s;-webkit-transition:all .3s;}
+        .layuimini-qiuck-module a cite {position:relative;top:2px;display:block;color:#666;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;font-size:14px;}
+        .welcome-module {width:100%;height:210px;}
+        .panel {background-color:#fff;border:1px solid transparent;border-radius:3px;-webkit-box-shadow:0 1px 1px rgba(0,0,0,.05);box-shadow:0 1px 1px rgba(0,0,0,.05)}
+        .panel-body {padding:10px}
+        .panel-title {margin-top:0;margin-bottom:0;font-size:12px;color:inherit}
+        .label {display:inline;padding:.2em .6em .3em;font-size:75%;font-weight:700;line-height:1;color:#fff;text-align:center;white-space:nowrap;vertical-align:baseline;border-radius:.25em;margin-top: .3em;}
+        .layui-red {color:red}
+        .main_btn > p {height:40px;}
+        .layui-bg-number {background-color:#F8F8F8;}
+        .layuimini-notice:hover {background:#f6f6f6;}
+        .layuimini-notice {padding:7px 16px;clear:both;font-size:12px !important;cursor:pointer;position:relative;transition:background 0.2s ease-in-out;}
+        .layuimini-notice-title,.layuimini-notice-label {
+            padding-right: 70px !important;text-overflow:ellipsis!important;overflow:hidden!important;white-space:nowrap!important;}
+        .layuimini-notice-title {line-height:28px;font-size:14px;}
+        .layuimini-notice-extra {position:absolute;top:50%;margin-top:-8px;right:16px;display:inline-block;height:16px;color:#999;}
+    </style>
+</head>
+<body>
+<div class="layuimini-container">
+    <div class="layuimini-main">
+        <div class="layui-row layui-col-space15">
+            <div class="layui-col-md8">
+                <div class="layui-row layui-col-space15">
+                    <div class="layui-col-md6">
+                        <div class="layui-card">
+                            <div class="layui-card-header"><i class="fa fa-warning icon"></i>数据统计</div>
+                            <div class="layui-card-body">
+                                <div class="welcome-module">
+                                    <div class="layui-row layui-col-space10">
+                                        <div class="layui-col-xs6">
+                                            <div class="panel layui-bg-number">
+                                                <div class="panel-body">
+                                                    <div class="panel-title">
+                                                        <span class="label pull-right layui-bg-blue">实时</span>
+                                                        <h5>用户统计</h5>
+                                                    </div>
+                                                    <div class="panel-content">
+                                                        <h1 class="no-margins">36590</h1>
+                                                        <small>当前用户总记录数</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs6">
+                                            <div class="panel layui-bg-number">
+                                                <div class="panel-body">
+                                                    <div class="panel-title">
+                                                        <span class="label pull-right layui-bg-cyan">实时</span>
+                                                        <h5>院系统计</h5>
+                                                    </div>
+                                                    <div class="panel-content">
+                                                        <h1 class="no-margins">163</h1>
+                                                        <small>当前院系总记录数</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs6">
+                                            <div class="panel layui-bg-number">
+                                                <div class="panel-body">
+                                                    <div class="panel-title">
+                                                        <span class="label pull-right layui-bg-orange">实时</span>
+                                                        <h5>浏览统计</h5>
+                                                    </div>
+                                                    <div class="panel-content">
+                                                        <h1 class="no-margins">8960</h1>
+                                                        <small>当前分类总记录数</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs6">
+                                            <div class="panel layui-bg-number">
+                                                <div class="panel-body">
+                                                    <div class="panel-title">
+                                                        <span class="label pull-right layui-bg-green">实时</span>
+                                                        <h5>毕业人数统计</h5>
+                                                    </div>
+                                                    <div class="panel-content">
+                                                        <h1 class="no-margins">94852</h1>
+                                                        <small>当前分类总记录数</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-col-md6">
+                        <div class="layui-card">
+                            <div class="layui-card-header"><i class="fa fa-credit-card icon icon-blue"></i>快捷入口</div>
+                            <div class="layui-card-body">
+                                <div class="welcome-module">
+                                    <div class="layui-row layui-col-space10 layuimini-qiuck">
+                                        <div class="layui-col-xs4 layuimini-qiuck-module">
+                                            <a href="javascript:;" layuimini-content-href="page/user/findUser.html" data-title="用户信息查询" data-icon="fa fa-mortar-board">
+                                                <i class="fa fa-mortar-board"></i>
+                                                <cite>用户信息查询</cite>
+                                            </a>
+                                        </div>
+                                        <div class="layui-col-xs4 layuimini-qiuck-module">
+                                            <a href="javascript:;" layuimini-content-href="page/colleage/addcolleage.html" data-title="院系信息查询" data-icon="fa fa-university">
+                                                <i class="fa fa-university"></i>
+                                                <cite>院系信息查询</cite>
+                                            </a>
+                                        </div>
+                                        <div class="layui-col-xs4 layuimini-qiuck-module">
+                                            <a href="javascript:;" layuimini-content-href="page/member/findMember.html" data-title="成员信息查询" data-icon="fa fa-group">
+                                                <i class="fa fa-group"></i>
+                                                <cite>成员信息查询</cite>
+                                            </a>
+                                        </div>
+
+                                        <div class="layui-col-xs4 layuimini-qiuck-module">
+                                            <a href="javascript:;" layuimini-content-href="page/openclass/findOpenclass.html" data-title="公开课信息查询" data-icon="fa fa-server">
+                                                <i class="fa fa-server"></i>
+                                                <cite>公开课信息查询</cite>
+                                            </a>
+                                        </div>
+                                        <div class="layui-col-xs4 layuimini-qiuck-module">
+                                            <a href="javascript:;" layuimini-content-href="page/competitor/findcompetition.html" data-title="参赛信息查询" data-icon="fa fa-sitemap">
+                                                <i class="fa fa-sitemap"></i>
+                                                <cite>参赛信息查询</cite>
+                                            </a>
+                                        </div>
+                                        <div class="layui-col-xs4 layuimini-qiuck-module">
+                                            <a href="javascript:;" layuimini-content-href="page/credit/findcredit.html" data-title="创新学分查询" data-icon="fa fa-trophy">
+                                                <i class="fa fa-trophy"></i>
+                                                <cite>创新学分查询</cite>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="layui-col-md12">
+                        <div class="layui-card">
+                            <div class="layui-card-header"><i class="fa fa-line-chart icon"></i>报表统计</div>
+                            <div class="layui-card-body">
+                                <div id="echarts-records" style="width: 100%;min-height:500px"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-col-md4">
+
+                <div class="layui-card">
+                    <div class="layui-card-header"><i class="fa fa-bullhorn icon icon-tip"></i>综合新闻</div>
+                    <div class="layui-card-body layui-text">
+                        <div class="layuimini-notice">
+                            <div class="layuimini-notice-title">回家过年 ——我校开展爱心送站活动</div>
+                            <div class="layuimini-notice-extra">2021-1-21 23:06</div>
+                            <div class="layuimini-notice-content layui-hide">
+                                为做好我校学生寒假有序错峰离校工作，有效降低返程风险，本着以学生为本的原则，根据学校安排部署，1月9日-10日，校长办公室、后勤管理处、校团委共同组织开展了集中送站服务，最大程度为学生提供便利和安全保障。
+                                送站工作从早上8点开始，一直持续到晚上20点，分别在主校区和西校区设立两个站点，提供发往太原站、太原南站方向的“点对点”送站服务。校团委全部工作人员、基层学院团委书记以及我校学生会、研究生会的学生骨干30余人参与了送站工作。
+                                虽然时值太原寒冬时节，但寒风凌冽的天气也阻挡不住工作人员的热情，大家想学生所想，急学生所急，尽最大努力为返程学生提供最优质的服务，确保每位学生平安到站，顺利返程。
+                                本次集中送站是学校落实疫情防控要求的重要举措之一，既为广大学生平安、顺利离校提供了便捷服务，也有效避免了学生自行乘坐公共交通工具面临的接触风险。据悉，期间共发车70余趟次，为3500名学生提供了送站服务，得到了广大学生一致好评。
+                            </div>
+                        </div>
+                        <div class="layuimini-notice">
+                            <div class="layuimini-notice-title">我校组织开展纪检监察干部全员培训</div>
+                            <div class="layuimini-notice-extra">2021-1-11 12:57</div>
+                            <div class="layuimini-notice-content layui-hide">
+                                纪委书记、监察专员做开班讲话，从提升政治能力、业务能力、群众工作能力和自我监督能力四个方面对纪检监察干部培训工作提出要求。随后，萧芬芬以《贯彻落实十九届五中全会精神 推动纪检监察工作高质量发展》为主题，就如何结合纪检监察工作实际贯彻落实十九届五中全会精神进行了专题辅导。她从党的十九届五中全会的伟大意义、我国发展环境面临的深刻复杂变化入题，以二〇三五年远景目标和国家“十四五”建议为主线，结合学校纪检监察工作实际，对全会精神进行了深入解读，从更加突出政治监督、坚持“严”的主基调、坚持人民为中心思想、更加突出监督治理效能、更加突出严管厚爱结合五个方面对学校“十四五”期间的纪检监察工作提出整体任务要求和相关建议。她要求全体纪检监察干部要切实增强本领，辩证把握严管和厚爱、约束和激励的关系，既用监督加压又用信任加力，既要把监督融入日常、做在经常，加强常态化管理，也要加强对敢担当善作为干部的激励保护，形成推动发展的动力、合力。
+                            </div>
+                        </div>
+                        <div class="layuimini-notice">
+                            <div class="layuimini-notice-title">我校举办科学技术奖申报辅导专题讲座</div>
+                            <div class="layuimini-notice-extra">2021-1-05 14:28</div>
+                            <div class="layuimini-notice-content layui-hide">
+                                2020年5月19日，应科学技术处邀请，太原理工大学矿山流体控制国家地方联合工程实验室主任寇子明教授在科学技术处会议室进行了题为“科学技术奖申报书撰写体会”的专题讲座。近120余名教师通过视频进行了收看，讲座由科技处副处长董增寿主持。
+                                寇子明教授首先详细解读了我国科技奖励体系概况、各级各类科学技术奖励情况以及国家科学技术奖励改革要点；分别从科研工作者和评审专家的角度，结合大量的申报实例，围绕科学技术奖申报流程、创新点凝练、申报书撰写技巧、支撑材料组织进行了详细讲解。寇子明教授认为，高水平的科研成果需要依托于重大科研项目、高效务实的科研团队、具有影响力的学术带头人以及不屈不挠的决心和甘于寂寞的意志。他强调，项目成果是基础、推荐材料是关键、答辩陈述是重点、信息沟通是保障。
+                            </div>
+                        </div>
+                        <div class="layuimini-notice">
+                            <div class="layuimini-notice-title">关于加强岁末年初和寒假疫情防控工作</div>
+                            <div class="layuimini-notice-extra">2020-12-27 11:02</div>
+                            <div class="layuimini-notice-content layui-hide">
+                                一、调整元旦和寒假放假时间安排。
+
+                                1.元旦放假1天，1月1日休息，1月2-3日教职工正常上班，学生正常上课。其中1月2日上1月13日（星期三）的课，1月3日上1月14日（星期四）的课。
+
+                                2.1月10日教职工正常上班，学生上1月15日（星期五）的课。
+
+                                3.学校安排的统考科目时间调整至1月13-16日，各教学单位根据学校统考时间合理安排各类院级考试。
+
+                                4.学校寒假放假时间为1月17日至2月27日，学生2月28日返校注册，3月1日正常上课。
+
+                                5.教职工寒假轮休时间为1月17日至2月27日，2月28日正常上班。
+
+                                6.如遇新冠肺炎疫情变化等特殊情况，学校将适时调整假期时间，并提前告知广大师生。
+
+                                二、强化疫情防控管理
+
+                                1.元旦期间，学校将严格管控校门，全体师生非必要不外出，不到人群聚集场所，非必要不到中高风险地区。如确需出行要严格履行报批手续，返回后按属地要求做好核酸检测和医学观察工作。
+
+                                2.各教学单位要在确保人员底数清、返家行程可追踪的前提下，对已经完成本学期各类教学任务的学生有序、错峰安排离校。学生一经放假离校后，非接到学校正式返校通知不得提前返校。
+
+                                3.寒假期间，值班人员、有教学、科研、管理任务人员、后勤安全保障人员和有其它工作任务人员实行名单制管理，继续执行“两点一线”上下班模式，其余教职工原则上不得进入校园，确有需要的实行二级单位审批，人力资源处、安全保卫处备案制度。
+
+                                4.全体师生在假期期间要按照要求完成“健康天天报”，并认真核查返校前14天的每日健康记录。中高风险地区返校的师生须提供开学前一周内核酸检测阴性证明，并在返校后严格按属地要求做好隔离和监测。
+
+                                5.各单位根据本通知要求，于1月3日18:00前将新的寒假值班安排报校长办公室行政科。
+
+                                6.全校各单位要认真落实本通知要求，全面压实主体责任，进一步强化寒假期间校园疫情防控工作，杜绝搞形式主义、责任落实不到位等问题，切实筑牢校园疫情防控安全防线。
+                            </div>
+                        </div>
+                        <div class="layuimini-notice">
+                            <div class="layuimini-notice-title">我校召开2020年度校领导班子民主生活会</div>
+                            <div class="layuimini-notice-extra">2020-12-11 11:55</div>
+                            <div class="layuimini-notice-content layui-hide">
+                                会上，王志连书记首先代表校领导班子作对照检查，通报了上年度民主生活会查摆问题的整改落实情况，从五个方面认真查摆差距和不足，并对问题产生的原因进行了深刻剖析，提出了今后的努力方向和整改措施。随后，班子成员依次作个人对照检查，本着对自己、对班子、对学校事业高度负责的精神，对存在的问题和不足进行深入的查摆分析，本着实事求是的原则进行严肃、认真、坦诚地批评和自我批评，达到了进一步统一思想、凝聚力量、团结鼓劲、担当作为的目的。
+                                最后，王志连书记进行了总结发言。他认为，此次民主生活会，大家开展了积极健康的思想斗争，打扫了政治上和思想上的灰尘，检身改过、日进日新，达到了查摆问题、明确方向、交流思想、增进团结、促进工作的目的。为了更好地运用好本次民主生活会的成果，结合习近平总书记重要讲话精神和本次会议主题，围绕班子建设，王志连书记提出三点要求。一是在强化理论武装、提升政治能力上下功夫。班子成员要旗帜鲜明讲政治，坚决贯彻落实中央和省委的决策部署，切实提升“三力”，尤其是政治执行力。二是在勇于担当作为、推进改革发展上下功夫。作为党员领导干部，必须要做到“政治过硬、本领高强”，要直面问题，直面矛盾，具有攻坚克难的勇气。三是在改进工作作风、推进落实落地上下功夫。作为班子成员，必须做到改进工作作风，树立良好形象，对一些重点工作，一定要有一抓到底的勇气。
+                            </div>
+                        </div>
+                        <div class="layuimini-notice">
+                            <div class="layuimini-notice-title">我校召开美育工作推进会</div>
+                            <div class="layuimini-notice-extra">2020-11-26 14:53</div>
+                            <div class="layuimini-notice-content layui-hide">
+                                会上，教务处处长李虹首先解读了中共中央办公厅、国务院办公厅联合印发的《关于全面加强和改进新时代学校美育工作的意见》（以下简称《意见》）精神。
+
+                                会议一致认为，《意见》阐明了美育工作总体要求，明确了美育工作总体目标，并对学校美育工作中完善课程和教材体系、深化教学改革具体措施、着力改善办学条件、加强组织保障等方面提出了具体要求。《意见》对新时代学校美育工作做了系统设计和全面部署，提出了新目标和新要求，意义重大，影响深远。
+
+                                王枝茂副校长对美育和美育工作谈了自己的看法和意见，并对加强学校的美育工作提出具体要求。他强调，要高度重视学校美育的重要性，先成人，后成才，高校要积极推进美育工作，使大学生成为健全的人、高尚的人、对社会有用的人；要通过系统全面的教育，培养出完美的人，享受美好的人生。他指出，学校美育必须不断增强以习近平新时代中国特色社会主义思想为指导，提升思想自觉、政治自觉、行动自觉，与党中央国务院的要求同向同行，与推进素质教育的要求同向同行，与学生全面发展的迫切要求同向同行。学校落实美育工作要从四个具体方面抓起，即完善学校美育教育的体系；明确美育教育的模式；严格美育教育的要求；形成学校美育的品牌。他表示，在今后学校的教学工作中，各方面要紧紧围绕美育教育积极开展工作，将美育教育的各项措施落到实处，抓出实效，看到实惠。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="layui-card">
+                    <div class="layui-card-header"><i class="fa fa-fire icon"></i>版本信息</div>
+                    <div class="layui-card-body layui-text">
+                        <table class="layui-table">
+                            <colgroup>
+                                <col width="100">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <td>框架名称</td>
+                                <td>
+                                    layuimini
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>当前版本</td>
+                                <td>v2.0.0</td>
+                            </tr>
+                            <tr>
+                                <td>主要特色</td>
+                                <td>零门槛 / 响应式 / 清爽 / 极简</td>
+                            </tr>
+                            <tr>
+                                <td>适用对象</td>
+                                <td>
+                                    高校
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="layui-card">
+                            <div class="layui-card-header"><i class="fa fa-paper-plane-o icon"></i>作者心语</div>
+                            <div class="layui-card-body layui-text layadmin-text">
+                                <p>本模板基于layui2.5.4以及font-awesome-4.7.0进行实现。</p>
+                                <p>如若系统出现问题我们的技术人员会紧急修复，用户可联系QQ152624153。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
+<script src="../js/lay-config.js?v=1.0.4" charset="utf-8"></script>
+<script>
+    layui.use(['layer', 'miniTab','echarts'], function () {
+        var $ = layui.jquery,
+            layer = layui.layer,
+            miniTab = layui.miniTab,
+            echarts = layui.echarts;
+
+        miniTab.listen();
+
+        /**
+         * 查看公告信息
+         **/
+        $('body').on('click', '.layuimini-notice', function () {
+            var title = $(this).children('.layuimini-notice-title').text(),
+                noticeTime = $(this).children('.layuimini-notice-extra').text(),
+                content = $(this).children('.layuimini-notice-content').html();
+            var html = '<div style="padding:15px 20px; text-align:justify; line-height: 22px;border-bottom:1px solid #e2e2e2;background-color: #2f4056;color: #ffffff">\n' +
+                '<div style="text-align: center;margin-bottom: 20px;font-weight: bold;border-bottom:1px solid #718fb5;padding-bottom: 5px"><h4 class="text-danger">' + title + '</h4></div>\n' +
+                '<div style="font-size: 12px">' + content + '</div>\n' +
+                '</div>\n';
+            parent.layer.open({
+                type: 1,
+                title: '综合新闻'+'<span style="float: right;right: 1px;font-size: 12px;color: #b1b3b9;margin-top: 1px">'+noticeTime+'</span>',
+                area: '500px;',
+                shade: 0.8,
+                id: 'layuimini-notice',
+                btnAlign: 'c',
+                moveType: 1,
+                content:html,
+                success: function (layero) {
+                    var btn = layero.find('.layui-layer-btn');
+                    btn.find('.layui-layer-btn0').attr({
+                        href: 'https://gitee.com/zhongshaofa/layuimini',
+                        target: '_blank'
+                    });
+                }
+            });
+        });
+
+        /**
+         * 报表功能
+         */
+        var echartsRecords = echarts.init(document.getElementById('echarts-records'), 'walden');
+        var optionRecords = {
+            title: {
+                text: '2020年应届生就业走向',
+                subtext: ''
+            },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'shadow'
+                }
+            },
+            legend: {
+                data: ['考研', '考公务员','考教师','自主创业','直接就业']
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: {
+                type: 'value',
+                boundaryGap: [0, 0.01]
+            },
+            yAxis: {
+                type: 'category',
+                data: ['计科院', '人文院', '外语院', '机械院', '法学院', '经管院']
+            },
+            series: [
+                {
+                    name: '考研',
+                    type: 'bar',
+                    data: [358, 485, 256, 485, 452, 212]
+                },
+                {
+                    name: '考公务员',
+                    type: 'bar',
+                    data: [485, 568, 686, 94, 241, 151]
+                }, {
+                    name: '考教师',
+                    type: 'bar',
+                    data: [0, 25, 365, 58, 3, 0]
+                }, {
+                    name: '自主创业',
+                    type: 'bar',
+                    data: [12, 15, 3, 10, 18, 36]
+                } ,{
+                    name: '直接就业',
+                    type: 'bar',
+                    data: [785, 854, 456, 685, 553, 387]
+                }
+            ]
+        };
+        echartsRecords.setOption(optionRecords);
+
+        // echarts 窗口缩放自适应
+        window.onresize = function(){
+            echartsRecords.resize();
+        }
+
+    });
+</script>
+</body>
+</html>

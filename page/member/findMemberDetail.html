@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>layui</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../../lib/layui-v2.5.5/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../css/public.css" media="all">
+    <style>
+        body {
+            background-color: #ffffff;
+        }
+        p{
+            margin-left: 20px;
+            line-height: 36px;
+            width:150px;
+            height:36px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="layui-form layuimini-form">
+    <div class="layui-form-item">
+        <label class="layui-form-label required">成员姓名</label>
+        <div class="layui-input-block">
+            <p>张三</p>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label required">成员学号</label>
+        <div class="layui-input-block">
+            <p>201926150120</p>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label required">性别</label>
+        <div class="layui-input-block">
+            <p>男</p>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label required">籍贯</label>
+        <div class="layui-input-block">
+            <p>山西省太原市小店区</p>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label required">电话</label>
+        <div class="layui-input-block">
+            <p>15639527784</p>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label required">院系</label>
+        <div class="layui-input-block">
+            <p>计算机科学与技术学院</p>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label required">专业</label>
+        <div class="layui-input-block">
+            <p>物联网工程</p>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label required">校内职务</label>
+        <div class="layui-input-block">
+            <p>学生会干部</p>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label required">加入日期</label>
+        <div class="layui-input-block">
+            <p>2020.4.12</p>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label required">状态</label>
+        <div class="layui-input-block">
+            <p>正常</p>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label required">担任的实验室职务</label>
+        <div class="layui-input-block">
+            <p>秘书长</p>
+        </div>
+    </div>
+
+</div>
+<script src="../../lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
+<script>
+    layui.use(['form','laydate'], function () {
+        var form = layui.form,
+            layer = layui.layer,
+            laydate = layui.laydate,
+            $ = layui.$;
+
+
+
+    });
+</script>
+</body>
+</html>
